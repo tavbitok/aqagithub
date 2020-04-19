@@ -23,7 +23,7 @@ describe(' Automated tests using JS+Protractor, covering Registration form', fun
 		
 		it('Input invalid data#1 in Username field', function() {
 			home_page.enterLogin(inputData[0]);
-			browser.sleep(5000);
+			browser.sleep(2000);
 			var getErrorTextMessage = home_page.getErrorTextLogin;
 			expect(getErrorTextMessage).toBeTruthy(errorMessage[0]);
 			home_page.clearLogin();
@@ -31,7 +31,7 @@ describe(' Automated tests using JS+Protractor, covering Registration form', fun
 		
 		it('Input invalid data#2 in Username field', function() {
 			home_page.enterLogin(inputData[1]);
-			browser.sleep(5000);
+			browser.sleep(2000);
 			var getErrorTextMessage = home_page.getErrorTextLogin;
 			expect(getErrorTextMessage).toBeTruthy(errorMessage[1]);
 			home_page.clearLogin();
@@ -39,7 +39,7 @@ describe(' Automated tests using JS+Protractor, covering Registration form', fun
 		
 		it('Input invalid data in Email field', function() {
 			home_page.enterEmail(inputData[2]);
-			browser.sleep(5000);
+			browser.sleep(2000);
 			var getErrorTextMessage = home_page.getErrorTextEmail;
 			expect(getErrorTextMessage).toBeTruthy(errorMessage[2]);
 			home_page.clearEmail();
