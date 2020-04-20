@@ -50,8 +50,9 @@ describe(' Automated tests using JS+Protractor, covering Registration form', fun
 	describe('Input valid data in required fields Form of registration and Complete registration', function() {
 		
 		var home_page = require('home_page.js');
-		var validUser = 'Robotester';
-		var validEmail = 'robotester@gmail.com';
+		var faker = require('faker');
+		var validUser = faker.name.lastName() + faker.name.firstName();
+		var validEmail = faker.internet.email();
 		var validPassword = 'Robo12345testeR';
 		
 		it('Input valid data in Username field, Email field and click Registration button', function() {
