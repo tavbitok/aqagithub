@@ -18,8 +18,8 @@ describe(' Automated tests using JS+Protractor, covering Registration form', fun
 	describe('Input invalid data in required fields Form of registration', function() {
 	
 		var home_page = require('home_page.js');
-		var inputData = ['user1', '@', 'user@mail.c'];
-		var errorMessage = ['Username user1 is not available.', 'Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.', 'Email is invalid or already taken'];
+		var inputData = ['user', '123@', 'user@mail.c'];
+		var errorMessage = ['Username user is not available.', 'Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.', 'Email is invalid or already taken'];
 		
 		it('Input invalid data#1 in Username field', function() {
 			home_page.enterLogin(inputData[0]);
